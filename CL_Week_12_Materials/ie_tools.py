@@ -1,6 +1,7 @@
 import spacy
 import pandas as pd
 from spacy.matcher import Matcher
+from functools import reduce
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -100,3 +101,8 @@ def get_kg(sent,nlp):
 
     decl = pd.DataFrame({'subject':subject, 'object':object, 'predicate':relations})
     return decl
+
+
+def isin_row(a, b, cols=None):
+    cols = cols or a.columns
+    return reduce(lambda x, y:x&y, [a[f].isin(b[f]) for f in cols])
