@@ -53,7 +53,7 @@ def get_entities(sent,nlp):
       prv_tok_dep = tok.dep_
       prv_tok_text = tok.text  
 
-  if('ent1' in globals()) & ('ent2' in globals()):
+  if('ent1' in locals()) & ('ent2' in locals()):
       return [ent1.strip(), ent2.strip()]
   else:
       return
