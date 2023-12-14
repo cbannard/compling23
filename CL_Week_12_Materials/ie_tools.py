@@ -104,6 +104,7 @@ def get_kg(sent,nlp):
     return decl
 
 
+
 def isin_row(a, b, cols=None):
     cols = cols or a.columns
     return reduce(lambda x, y:x&y, [a[f].isin(b[f]) for f in cols])
