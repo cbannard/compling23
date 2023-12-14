@@ -5,7 +5,9 @@ from spacy.matcher import Matcher
 
 
 def get_entities(sent):
-  
+  import spacy
+  import pandas as pd
+  from spacy.matcher import Matcher
 ## chunk 1
   nlp = spacy.load("en_core_web_sm")  
   Ent1 = ""
@@ -55,6 +57,9 @@ def get_entities(sent):
   return [ent1.strip(), ent2.strip()]
 
 def get_relation(sent):
+  import spacy
+  import pandas as pd
+  from spacy.matcher import Matcher
   nlp = spacy.load("en_core_web_sm")
   doc = nlp(sent)
 
