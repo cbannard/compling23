@@ -2,6 +2,7 @@ import spacy
 import pandas as pd
 from spacy.matcher import Matcher
 
+nlp = spacy.load("en_core_web_sm")
 
 def get_entities(sent):
   ## chunk 1
