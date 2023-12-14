@@ -84,7 +84,7 @@ def get_relation(sent,nlp):
   return(span.text)
 
 
-def isin_row(a, b, cols=None):
+def isin_row(a, b):
     cols = cols or a.columns
     return reduce(lambda x, y:x&y, [a[f].isin(b[f]) for f in cols])
 
