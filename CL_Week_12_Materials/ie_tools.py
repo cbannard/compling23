@@ -87,8 +87,8 @@ def get_kg(sent,nlp):
     entity_pairs = []
     relations = []
 
-    entity_pairs.append(get_entities(s,nlp))
-    relations.append(get_relation(s,nlp))
+    entity_pairs.append(get_entities(sent,nlp))
+    relations.append(get_relation(sent,nlp))
   
     indices = [i for i, x in enumerate(entity_pairs) if x != None]
     entity_pairs = [entity_pairs[i] for i in indices]
