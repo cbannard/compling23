@@ -4,12 +4,12 @@ from spacy.matcher import Matcher
 
 nlp = spacy.load("en_core_web_sm")
 
-def get_entities(sent):
+def get_entities(sent,nlp):
   import spacy
   import pandas as pd
   from spacy.matcher import Matcher
 ## chunk 1
-  nlp = spacy.load("en_core_web_sm")  
+  #nlp = spacy.load("en_core_web_sm")  
   Ent1 = ""
 
   prv_tok_dep = ""    # dependency tag of previous token in the sentence
@@ -56,11 +56,11 @@ def get_entities(sent):
 
   return [ent1.strip(), ent2.strip()]
 
-def get_relation(sent):
+def get_relation(sent,nlp):
   import spacy
   import pandas as pd
   from spacy.matcher import Matcher
-  nlp = spacy.load("en_core_web_sm")
+  #nlp = spacy.load("en_core_web_sm")
   doc = nlp(sent)
 
   # Matcher class object 
