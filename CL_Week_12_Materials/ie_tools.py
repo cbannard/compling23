@@ -68,6 +68,7 @@ def get_relation(sent,nlp):
   # Matcher class object 
   matcher = Matcher(nlp.vocab)
 
+  
   #define the pattern 
   pattern = [{'DEP':'ROOT'}, 
             {'DEP':'prep','OP':"?"},
