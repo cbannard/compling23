@@ -52,10 +52,9 @@ def get_entities(sent,nlp):
       # update variables
       prv_tok_dep = tok.dep_
       prv_tok_text = tok.text  
-
-  if('ent1' in locals()) & ('ent2' in locals()):
+  try:
       return [ent1.strip(), ent2.strip()]
-  else:
+  except:
       return
   
 def get_relation(sent,nlp):
