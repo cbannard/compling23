@@ -86,7 +86,7 @@ def get_relation(sent,nlp):
 
 def row_contains(a, b):
     from functools import reduce
-    cols = cols or a.columns
+    cols = a.columns
     toret=reduce(lambda x, y:x&y, [a[f].isin(b[f]) for f in cols])
     return toret 
 
