@@ -84,6 +84,9 @@ def get_relation(sent,nlp):
   return(span.text)
 
 
+def isin_row(a, b, cols=None):
+    cols = cols or a.columns
+    return reduce(lambda x, y:x&y, [a[f].isin(b[f]) for f in cols])
 
 def get_kg(sent,nlp):
     entity_pairs = []
@@ -105,6 +108,3 @@ def get_kg(sent,nlp):
 
 
 
-def isin_row(a, b, cols=None):
-    cols = cols or a.columns
-    return reduce(lambda x, y:x&y, [a[f].isin(b[f]) for f in cols])
