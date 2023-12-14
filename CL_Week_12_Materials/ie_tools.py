@@ -85,6 +85,7 @@ def get_relation(sent,nlp):
 
 
 def isin_row(a, b):
+    from functools import reduce
     cols = cols or a.columns
     return reduce(lambda x, y:x&y, [a[f].isin(b[f]) for f in cols])
 
