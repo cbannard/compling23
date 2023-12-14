@@ -84,6 +84,7 @@ def get_relation(sent,nlp):
   return(span.text)
 
 
+
 def get_kg(sent,nlp):
     entity_pairs = []
     relations = []
